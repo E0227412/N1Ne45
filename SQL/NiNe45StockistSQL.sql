@@ -114,3 +114,27 @@ CREATE TABLE `Customers` (
 ALTER TABLE Customers
 ADD FOREIGN KEY (`CustomerServiceEmployeeID`) REFERENCES Employees(`EmployeeID`);
   
+#Alter Table
+ALTER TABLE `n1ne45stockists`.`parts` 
+ADD COLUMN `PartUnitPrice` DECIMAL(4) NOT NULL AFTER `PartName`;
+
+
+ALTER TABLE `n1ne45stockists`.`parts` 
+ADD COLUMN `PartDescription` VARCHAR(45) NOT NULL AFTER `PartUnitPrice`;
+
+
+ALTER TABLE `n1ne45stockists`.`parts` 
+ADD COLUMN `PartColor` VARCHAR(10) NOT NULL AFTER `PartDescription`;
+
+
+ALTER TABLE `n1ne45stockists`.`parts` 
+ADD COLUMN `PartDimension` VARCHAR(45) NOT NULL AFTER `PartColor`;
+
+
+ALTER TABLE `n1ne45stockists`.`parts` 
+ADD COLUMN `PartManufacturer` VARCHAR(45) NOT NULL AFTER `PartSupplierID`;
+
+
+ALTER TABLE `n1ne45stockists`.`parts` 
+CHANGE COLUMN `PartUnitPrice` `PartUnitPrice` FLOAT NOT NULL ;
+
